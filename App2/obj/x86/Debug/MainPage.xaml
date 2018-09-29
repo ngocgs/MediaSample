@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="App2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="54,42,0,0" Text="Select video" VerticalAlignment="Top" RenderTransformOrigin="-0.714,-0.125"/>
+        
+        <MediaElement x:ConnectionId='2' x:Name="mdElement" HorizontalAlignment="Left" Height="400" Margin="300,45,0,0" VerticalAlignment="Top" Width="650"/>
+
+        <Button x:ConnectionId='3' Content="Browser.." HorizontalAlignment="Left" Margin="184,40,0,0" VerticalAlignment="Top" Width="99"                     />
+
+        <ListView x:ConnectionId='4' x:Name="lstFile" HorizontalAlignment="Left" Height="350" Margin="20,100,0,0" VerticalAlignment="Top" Width="270"                                            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:ConnectionId='5' Content="next" HorizontalAlignment="Left" Margin="550,450,0,0" VerticalAlignment="Top"                    Width="80px" />
+        <Button x:ConnectionId='6' Content="pre" HorizontalAlignment="Left" Margin="450,450,0,0" VerticalAlignment="Top"                        Width="80" />
+        <Button x:ConnectionId='7' Content="first" HorizontalAlignment="Left" Margin="350,450,0,0" VerticalAlignment="Top"                     Width="80" />
+        <Button x:ConnectionId='8' Content="last" HorizontalAlignment="Left" Margin="650,450,0,0" VerticalAlignment="Top"                    Width="80px" />
+        <Button x:ConnectionId='9' Content="Repeat" HorizontalAlignment="Left" Margin="750,450,0,0" VerticalAlignment="Top"                      Width="80" />
+        <Button x:ConnectionId='10' Content="Random" HorizontalAlignment="Left" Margin="850,450,0,0" VerticalAlignment="Top"                     />
+
+    </Grid>
+</Page>
+
